@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Car Rental</title>
+    <link rel="stylesheet" href="styleadmin.css">
+</head>
+<body>
+    <div class="navbar">
+        <header>
+            <h1>Admin Dashboard</h1>
+        </header>
+
+        <nav class="verticalbuttons">
+            <ul>
+                <li><a href="#manage-cars">Manage Cars</a></li>
+                <li><a href="#manage-bookings">Manage Bookings</a></li>
+                <li><a href="#manage-users">Manage Users</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Manage Cars Section -->
+            <section id="manage-cars">
+                <h2>Manage Cars</h2>
+                <form id="addCarForm">
+                    <input type="text" id="carModel" placeholder="Car Model" required>
+                    <input type="text" id="carBrand" placeholder="Car Brand" required>
+                    <input type="number" id="carPrice" placeholder="Price per Day" required>
+                    <button type="submit">Add Car</button>
+                </form>
+                <ul id="carList"></ul>
+            </section>
+
+
+            <br>
+
+
+            <!-- Manage Bookings Section -->
+            <section id="manage-bookings">
+                <h2>Manage Bookings</h2>
+                <ul id="bookingList">
+                    <!-- Booking details will be displayed here -->
+                </ul>
+            </section>
+
+
+            <br>
+
+
+            <!-- Manage Users Section -->
+            <section id="manage-users">
+                <h2>Manage Users</h2>
+                <ul id="userList">
+                    <!-- User details will be displayed here -->
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="indexadmin.js"></script>
+</body>
+</html>

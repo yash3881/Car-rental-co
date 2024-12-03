@@ -1,0 +1,53 @@
+{
+    "cars": [
+      {
+        "year": "201yy",
+        "model": "2018 Honda Civic",
+        "price": "₹12000",
+        "monthly_price": "₹3000",
+        "img_src": "img/car1.jpg",
+        "alt": "Honda Civic"
+      },
+      {
+        "year": "2017",
+        "model": "2018 Hyundai Verna",
+        "price": "₹16000",
+        "monthly_price": "₹3200",
+        "img_src": "img/car2.jpg",
+        "alt": "Hyundai Verna"
+      },
+      {
+        "year": "2017",
+        "model": "2018 Mustang",
+        "price": "₹20000",
+        "monthly_price": "₹5000",
+        "img_src": "img/car3.jpg",
+        "alt": "Mustang"
+      },
+      {
+        "year": "2017",
+        "model": "2018 Honda City",
+        "price": "₹11000",
+        "monthly_price": "₹2800",
+        "img_src": "img/car4.jpg",
+        "alt": "Honda City"
+      },
+      {
+        "year": "2017",
+        "model": "2018 Honda WR-V",
+        "price": "₹18000",
+        "monthly_price": "₹5000",
+        "img_src": "img/car5.jpg",
+        "alt": "Honda WR-V"
+      },
+      {
+        "year": "2017",
+        "model": "2018 Porsche",
+        "price": "₹32000",
+        "monthly_price": "₹9000",
+        "img_src": "img/car6.jpg",
+        "alt": "Porsche"
+      }
+    ]
+  }
+  

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR RENTAL WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <i class="bx bxs-car"></i>
+            <span> Car Rental Co.</span> 
+        </div>
+        
+        <div class="bx bx-menu" id="menu-icon"></div>
+        
+        <ul class="navbar">
+            <li><a href="#home" >Home</a> </li>
+            <li><a href="#ride">Rides</a> </li>
+            <li><a href="#services">Services</a> </li>
+            <li><a href="#about">About Us</a> </li>
+            <li><a href="#reviews">Reviews</a> </li>
+            <li><a href="#newsletter">Contact Us</a> </li>
+        </ul>
+        
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
+    <a href="#home">Home</a>
+    <a href="#ride">Ride</a>
+    <a href="#services">Services</a>
+    <a href="#about">About Us</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#newsletter">Contact Us</a>
+</div>
+
+<!-- Main content -->
+<div id="main" class="main-content">
+    <button class="openbtn" onclick="openSidebar()">☰</button>
+   
+</div>
+
+<script src="main.js"></script>
+  
+        <div class="header-btn">
+            
+            
+            <a href="login.html" class="sign-in-log-in" >Sign Up / Login</a>
+        </div>
+    </header>
+    <section class="home" id="home">
+        <div class="text">
+            <h1>Looking To Rent A Car</h1>
+            <p>Making Your Car Rental Journey Easy </p>
+       
+       
+      
+    
+        <div class="main-image" id="main-image">
+            <img src="">
+       
+    
+       
+      
+        
+        <div class="main-image" id="main-image">
+            <img src="">
+     
+          
+          <div class="app-stores">
+            <img src="img/ios.png" alt="App Store">
+            <img src="img/512x512.png" alt="Play Store">
+        </div>
+        
+        
+       
+        </section>
+        
+           
+       
+    </section>
+    <section class="ride" id="ride">
+        <div class="heading">
+            <span>How It Works</span>
+            <h1>Rent With 3 Easy Steps</h1>
+            <div class="ride-container">
+                <div class="box">
+                    <i class='bx bxs-map'></i>
+                    <h2>Choose A Location</h2>
+                    <p>Enter Your Pick-Up Location</p>
+                    <form action="">
+                        <div class="input-box">
+                            <span>Location</span>
+                            
+                            <input type="search" name="" id="" placeholder="Search Places">
+                        </div>
+                    </form>
+                </div>
+                <div class="box">
+                    <i class='bx bxs-calendar-check'></i>
+                    <h2>Pick-Up Date</h2>
+                    <p>Enter Pick-Up Date</p>
+                    <br>
+                    <span>Pick-Up Date</span>
+                    <input type="date" name="" id="">
+                </div>
+                <div class="box">
+                    <i class='bx bxs-car'></i>
+                    <h2>Book A Car</h2>
+                    <p>Enter Return Date</p>
+                    <br>
+                    <span>Return Date</span>
+                    <input type="date" name="" id="">
+                </div>
+            </div>
+            
+
+
+        
+                <a href="checkout.html" class="btn"> Submit</a>
+            </form>
+        </div>
+
+
+        </section>
+        <section class="services" id = services>
+            <div class="heading">
+                <span>Best Services</span>
+                <h1>Explore Our Top Deals<br> From Top-Rated Dealers</h1>
+            </div>
+            <section class="services-container">
+                <!-- The car boxes will be dynamically populated here -->
+            </section>
+        
+            <script>
+                // Fetching the JSON data
+                fetch('cars.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const carsContainer = document.querySelector('.services-container');
+        
+                        // Loop through each car and generate the HTML
+                        data.cars.forEach(car => {
+                            // Create a new box for each car
+                            const carBox = document.createElement('div');
+                            carBox.classList.add('box');
+        
+                            // Inner HTML for the car box
+                            carBox.innerHTML = `
+                                <div class="box-img">
+                                    <img src="${car.img_src}" alt="${car.alt}">
+                                </div>
+                                <p>${car.year}</p>
+                                <h3>${car.model}</h3>
+                                <h2>${car.price} | ${car.monthly_price}<span>/month</span></h2>
+                                <a href="#" class="btn">Rent Now</a>
+                            `;
+        
+                            // Append the car box to the container
+                            carsContainer.appendChild(carBox);
+                        });
+                    })
+                    .catch(error => console.error('Error fetching car data:', error));
+            </script>
+        
+                <!-- Add more boxes as needed -->
+            </div>
+        </section>
+        
+
+<section class="about" id="about">
+    <div class="heading">
+        <span>About Us</span>
+        <br>
+    <h1> Best Customer Experiences</h1>
+    </div>
+    <div class="about-container">
+        <div class="about-image">
+            <img src="img/1.jpg" alt="">
+        </div>
+        <div class="about-text">
+            
+           <p>
+            Here, we make your journey smoother by offering reliable, affordable, and hassle-free car rentals. With a wide range of vehicles to choose from, whether you need a compact car for city drives or a spacious SUV for a family trip, we’ve got you covered. Our commitment to excellent customer service ensures that your rental experience is as convenient and seamless as possible. Wherever you’re headed, we’re here to help you get there safely and comfortably. 
+            Lets drive together!.</p>
+           
+           <a href="aboutus" class="btn">Learn More</a>
+        </div> 
+</div>
+
+<section class="reviews reviews12" id="reviews">
+    <div class="heading">
+        <h1>What Our Customers Say</h1>
+    </div>
+    <div class="reviews-container">
+        <!-- Review 1 -->
+        <div class="review-box">
+            <div class="review-img">
+                <img src="img/rev1.jpg" alt="John">
+            </div>
+            <h3>John</h3>
+            <div class="stars">★★★★★</div>
+            <p>Nice Experiences</p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-box">
+            <div class="review-img">
+                <img src="img/reV2.jpg" alt="Morris">
+            </div>
+            <h3>Morris</h3>
+            <div class="stars">★★★★☆</div>
+            <p>Awesome Services</p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-box">
+            <div class="review-img">
+                <img src="img/rev3.jpg" alt="Beth">
+            </div>
+            <h3>Beth</h3>
+            <div class="stars">★★★★☆</div>
+            <p>Cars are in good condition</p>
+        </div>
+    </div>
+</section>
+
+  
+     
+    </div>
+
+    <section class="newsletter" >
+    <div class="heading">
+      <h2>Stay Updated!</h2>
+      <p>Subscribe to our newsletter for the latest updates, deals, and offers.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Enter Your Email..." />
+        <button type="submit">Subscribe</button>
+      </div>
+    </div>
+  </section>
+
+
+         <!-- Contact form -->
+    <section class="newsletter" id = "newsletter"> 
+        <div class="newsletter-content" >
+            <span>Your Details</span>
+            <form action="#" method="POST">
+
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" required placeholder="Enter Your Name...">
+                
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required placeholder="Enter Your Email...">
+
+                <label for="phone">Phone: </label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone...">
+
+                <label for="message">Message: </label>
+                <textarea id="message" name="message" rows="4" required placeholder="Enter Your Message..."></textarea>
+
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </section>
+    <!-- Company contact info -->
+    <section class="contact-info">
+        <span>Contact Information</span>
+        <address>
+            Car Rental Co.<br>
+            123 Main Street<br>
+            City, State Zip Code<br>
+            Phone: <a href="tel:1234567890">123-456-7890</a><br>
+            Email: <a href="mailto:info@example.com">info@example.com</a>
+        </address>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <p>
+          &copy; 2023 Your Company. All rights reserved.
+          </p>
+    </footer>
+    <script src="main.js"></script>
+    <script>src="server2.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="static/js/main.<hash>.js"></script>
+
+  </head>
+  <body>
+    <div id="react-navbar"></div>
+</body>
+
+<script>
+    function openSidebar() {
+    // Open the sidebar by setting its width
+    document.getElementById("sidebar").style.width = "250px";
+    // Push the main content to the right
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeSidebar() {
+    // Close the sidebar by resetting its width
+    document.getElementById("sidebar").style.width = "0";
+    // Reset the main content margin
+    document.getElementById("main").style.marginLeft = "0";
+}
+
+</script>
+
+</html>
+  

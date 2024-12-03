@@ -1,0 +1,19 @@
+{
+    "slideIndex": 1,
+    "slides": [
+      { "id": 1, "className": "productSlides", "display": "none" },
+      { "id": 2, "className": "productSlides", "display": "none" },
+      { "id": 3, "className": "productSlides", "display": "none" }
+    ],
+    "dots": [
+      { "id": 1, "className": "dot", "active": false },
+      { "id": 2, "className": "dot", "active": false },
+      { "id": 3, "className": "dot", "active": false }
+    ],
+    "settings": {
+      "autoPlay": true,
+      "interval": 5000,
+      "loop": true
+    }
+  }
+  

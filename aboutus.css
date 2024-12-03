@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    
+ 
+}
+
+:root {
+    --main-color: #000000;
+    --second-color: #ffac38;
+    --text-color: #444;
+    --gradient: linear-gradient(#fe5b3d, #ffac38);
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+section {
+    padding: 50px 100px;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eeeff1;
+    padding: 15px 100px;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    font-size: 1rem;
+    padding: 10px 25px;
+    color: var(--text-color);
+    font-weight: 500;
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: rgb(113, 109, 109);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    z-index: 10001;
+}
+
+
+/* Style for the button container */
+.header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Style for the link */
+.header-btn .sign-in-log-in {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: #666668; /* Blue background */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.header-btn .sign-in-log-in:hover {
+  background-color: #020305; /* Darker blue on hover */
+  color: #ffffff;
+}
+
+/* About Section */
+.about {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.about-img img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-info button {
+    background-color: #444342;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.about-info button:hover {
+    background-color: #070706;
+}
+
+/* Team Section */
+.team {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.team h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    width: 320px; /* Increased the width of the card */
+    height: 380px; /* Added a height for a more balanced look */
+    border-radius: 20px;
+    margin: 15px; /* Slightly increased margin for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img img {
+    width: 100%;
+    height: 250px; /* Increased the image height to take up more space */
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 10px;
+}
+
+.card-name {
+    font-size: 16px; /* Decreased font size */
+    margin-bottom: 8px; /* Adjusted margin for smaller text */
+    
+}
+
+.card-role {
+    font-size: 12px; /* Decreased font size */
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.card-email {
+    font-size: 10px; /* Decreased font size */
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.card .button {
+    background-color: #51504e;
+    color: white;
+    padding: 8px 8px; /* Adjusted padding for smaller text */
+    border: none;
+    border-radius: px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.card .button:hover {
+    background-color: #0b0a0a;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .bx-menu {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .openbtn {
+        display: block;
+    }
+}
+
+
+
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    height: 100%;
+    width: 0; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0; /* Leftmost position */
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: width 0.5s; /* Smooth transition for open/close */
+    padding-top: 60px;
+    z-index: 1000;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: color 0.3s; /* Smooth color change on hover */
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white;
+  }
+  
+  /* Main content styles */
+  .main-content {
+    padding: 10px;
+    transition: margin-left 0.5s;
+    overflow: hidden;
+  }
+  
+  /* Open button styles */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+    top: 35px;
+    left: 10px; /* Ensures it's near the sidebar */
+    z-index: 1001; /* Stays above the sidebar */
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 16px;
+    }
+  }
